@@ -1,5 +1,6 @@
 package dev_be.feign_client.controller;
 
+import dev_be.feign_client.common.dto.BaseRequestInfo;
 import dev_be.feign_client.common.dto.BaseResponseInfo;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,14 @@ public class TargetController {
             @RequestParam("age") Long age
     ) {
         return BaseResponseInfo.of(header, name, age);
+    }
+
+    @PostMapping("/post")
+    public BaseResponseInfo demoPost(
+            @RequestHeader("CustomHeaderName") String header,
+            @RequestBody BaseRequestInfo baseRequestInfo
+    ) {
+        return BaseResponseInfo.of(header, baseRequestInfo.name(), baseRequestInfo.age());
     }
 
 }
