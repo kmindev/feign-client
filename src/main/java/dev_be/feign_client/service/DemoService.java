@@ -1,7 +1,7 @@
 package dev_be.feign_client.service;
 
 import dev_be.feign_client.feign.client.DemoFeignClient;
-import dev_be.feign_client.feign.common.dto.BaseResponseInfo;
+import dev_be.feign_client.common.dto.BaseResponseInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

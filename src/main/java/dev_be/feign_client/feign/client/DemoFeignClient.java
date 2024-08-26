@@ -1,6 +1,6 @@
 package dev_be.feign_client.feign.client;
 
-import dev_be.feign_client.feign.common.dto.BaseResponseInfo;
+import dev_be.feign_client.common.dto.BaseResponseInfo;
 import dev_be.feign_client.feign.config.DemoFeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package dev_be.feign_client.feign.common.dto;
+package dev_be.feign_client.common.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
