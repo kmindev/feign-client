@@ -1,16 +1,18 @@
-feign:
-  url:
-    prefix: http://localhost:8080/target_server # DemoFeignClient?? ??? url prefix ?
-  client:
-    config:
-      default:
-        connectTimeout: 1000
-        readTimeout: 3000
-        loggerLevel: NONE
-      demo-client: # DemoFeignClient?? ??? Client ?? ?
-        connectTimeout: 1000
-        readTimeout: 10000
-        loggerLevel: HEADERS # ??? ??? ?? FeignCustomLogger -> Logger.Level logLevel ??? ???
+spring:
+  cloud:
+    openfeign:
+      url:
+        prefix: http://localhost:8080/target_server # DemoFeignClient?? ??? url prefix ?
+      client:
+        config:
+          default:
+            connectTimeout: 1000
+            readTimeout: 3000
+            loggerLevel: NONE
+          demo-client:
+            connectTimeout: 1000
+            readTimeout: 10000
+            loggerLevel: HEADERS
 
 #  [loggerLevel ??]
 #      ref : feign.Logger.Level

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @FeignClient(
         name = "demo-client",
-        url = "${feign.url.prefix}",
+        url = "${spring.cloud.openfeign.url.prefix}",
         configuration = DemoFeignConfig.class
 )
 public interface DemoFeignClient {
