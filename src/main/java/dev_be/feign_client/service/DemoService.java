@@ -29,4 +29,9 @@ public class DemoService {
         System.out.println("response.getBody().header() = " + response.getBody().header());
         return "post";
     }
+
+    public String errorDecoder() {
+        demoFeignClient.callErrorDecoder();
+        return "error";
+    }
 }

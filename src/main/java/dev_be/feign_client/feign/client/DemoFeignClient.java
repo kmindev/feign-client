@@ -27,4 +27,7 @@ public interface DemoFeignClient {
             @RequestBody BaseRequestInfo baseRequestInfo
     );
 
+    @GetMapping("/error")
+    ResponseEntity<BaseResponseInfo> callErrorDecoder();
+
 }
